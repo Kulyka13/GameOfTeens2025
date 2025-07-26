@@ -6,9 +6,9 @@ public class Bullet : MonoBehaviour
 {
 	[SerializeField] int damage;
 
-	private void OnCollisionEnter2D(Collision2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+		IDamageable damageable = collision.GetComponent<IDamageable>();
 		if (damageable != null)
 		{
 			damageable.TakeDamage(damage);

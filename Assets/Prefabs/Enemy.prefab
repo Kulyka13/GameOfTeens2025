@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8421924061620461540}
   - component: {fileID: 465178304760286044}
+  - component: {fileID: 7949331434296038326}
+  - component: {fileID: 3736992744935528774}
+  - component: {fileID: 4446263143163951431}
   - component: {fileID: 7863071289284432661}
   - component: {fileID: 4765168014691076732}
-  - component: {fileID: 7949331434296038326}
+  - component: {fileID: 6004414413760595485}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -87,6 +90,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7949331434296038326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100963458551821314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf01bf9811f9f1341947da067c9a7be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: 0, y: 0}
+  moveSpeed: 2
+--- !u!114 &3736992744935528774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100963458551821314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f711741e0686a48a5e5a90a7285dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &4446263143163951431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100963458551821314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8cac295f301f147a92c528f056ddea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7863071289284432661
 Rigidbody2D:
   serializedVersion: 4
@@ -143,7 +185,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -159,7 +201,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7949331434296038326
+--- !u!114 &6004414413760595485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,8 +210,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5100963458551821314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf01bf9811f9f1341947da067c9a7be7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0945c0acc4fcfc04f890995dd5af620a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0}
-  moveSpeed: 2
+  damage: 10
